@@ -24,7 +24,7 @@ ui <- fluidPage(
     div(
       class = "d-flex gap-4",
       a("GitHub", href = "https://github.com/undelisch/"),
-      a("Help", href = "https://github.com/undelisch/ZeppR/documentation")
+      a("Help", href = "https://github.com/undelisch/ZeppR/README.md")
     )
   ),
   
