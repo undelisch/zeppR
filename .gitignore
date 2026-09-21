@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# non-public data
+/data/*
+!/data/user00
+!/data/user00/
+
+# dev sources
+/dev/

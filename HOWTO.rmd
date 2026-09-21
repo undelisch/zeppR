@@ -1,0 +1,44 @@
+---
+title: "How to extract data from the Zepp app"
+author: "undelisch"
+date: "2026-07-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How to download your data from Zepp as CSV
+
+You can actually download all of your data from Zepp into neat CSV files. However, this is not done through the Google Drive backup feature or anything nested in the same category of cloud sync or storage. 
+
+The option as of now (07/2026) is available if you navigate here: 
+
+1. Click the **Profile Icon** (little figure) in the upper right corner of the app to get to your presonal profile. 
+2. Scroll all the way down to the **Settings** link and click it >. 
+3. The second to last option is **Personal Information Security and Privacy**, which is quite misleading but you want to click just that. 
+4. From here, yes that is the one, you click on **Delete Account and Data**. (No worries, nothing will happen, but if anything bad happens, it is not my fault. It is your fault.) 
+5. Now basically an in-app browser feature leads you to a Mi page. (Yes, "mi" like in Xiaomi! You need a "mi account" for this. Best to register it beforehands too – You can do that here: https://account.xiaomi.com/fe/service/login/). Finally, you can see the following options: 
+    - Clear data
+    - Delete account
+    - Revoke authorization 
+    - **Export data**
+6. Click just that **Export data** option. You will receive a warning saying something like "Exporting data will increase the risk of data loss." (I assume, so far having been correct about this one, that this is w.r.t. your personal data leaving the platform and therefore possibly becoming vulnerable to potential threat actors – however it so far had no effect on the functionality of the Zepp app for me or on the data stored within said app.)
+7. You will then be prompted to select the type of data you want to export. For the purpose of this shiny app, we want to only export **"Personal data"** (first point), but feel free to extract more data too and experiment with it. The different types of data will be stored in different CSV files anyway, so it won't affect the functionality of this app. 
+8. Below the data options you can also **select the date range**. Setting it to a larger range, I have encountered some errors or longer processing time. However, you can also come back to this option several times to create individual archives e.g. of different years or months. 
+9. Confirm with **OK** and you will be taken to the next step, where you are to **enter your e-mail** address and confirm a **captcha**. 
+10. Usually within a few seconds or minutes you will receive an email from noreply@zepp.com. Follow the instructions to download your `zip` archive. 
+
+## Extract data from the zip archive
+
+Say, you downloaded `1234_5678.zip` successfully. You can now extract it using 7zip (highly recommended for both Linux and Windows users at this point). 
+
+Navigate to your working directory and execute: 
+
+```
+7z x 1234_5678.zip
+```
+You will be prompted to enter the archive password to extract the files. The password is shown on the download page, the link to which you will have received in that e-mail mentioned before. 
+
+After the extraction, you might want to move the data to a directory with a meaningful name, such as one including the date range of your body data or the download date. 
