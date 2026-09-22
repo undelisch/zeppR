@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.zeppR.pid
 
 # non-public data
 /data/*
