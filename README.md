@@ -80,6 +80,25 @@ shiny::runApp()
 
 For more information on how to download your personal data from Zepp, check out [`HOWTO.Rmd`](HOWTO.Rmd).
 
+## Add a launcher (Linux only)
+
+To add a launcher, e.g. to a pane, create an empty launcher that leads to the file `zeppR.sh` in the apps root directory containing the following command: 
+
+```bash
+#!/bin/bash
+R -e "shiny::runApp('.', launch.browser = TRUE)"
+```
+
+In the launcher settings, set the working directory to the app's root dir and the command to `./zeppR.sh`. 
+
+Don't forget to make `zeppR.sh` executable using e.g.
+
+```bash
+sudo chmod +x zeppR.sh
+```
+
+If desired, you can use the icon from the root directory via the image selection option of your launcher menu to customize the button. 
+
 ## Status
 
 This project is under active development.

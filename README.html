@@ -448,6 +448,21 @@ RStudio.</p>
 <p>For more information on how to download your personal data from Zepp,
 check out <a href="HOWTO.Rmd"><code>HOWTO.Rmd</code></a>.</p>
 </div>
+<div id="add-a-launcher-linux-only" class="section level2">
+<h2>Add a launcher (Linux only)</h2>
+<p>To add a launcher, e.g. to a pane, create an empty launcher that
+leads to the file <code>zeppR.sh</code> in the apps root directory
+containing the following command:</p>
+<pre class="bash"><code>#!/bin/bash
+R -e &quot;shiny::runApp(&#39;.&#39;, launch.browser = TRUE)&quot;</code></pre>
+<p>In the launcher settings, set the working directory to the app’s root
+dir and the command to <code>./zeppR.sh</code>.</p>
+<p>Don’t forget to make <code>zeppR.sh</code> executable using e.g.</p>
+<pre class="bash"><code>sudo chmod +x zeppR.sh</code></pre>
+<p>If desired, you can use the icon from the root directory via the
+image selection option of your launcher menu to customize the
+button.</p>
+</div>
 <div id="status" class="section level2">
 <h2>Status</h2>
 <p>This project is under active development.</p>
