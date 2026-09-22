@@ -82,6 +82,8 @@ For more information on how to download your personal data from Zepp, check out 
 
 ## Add a launcher (Linux only)
 
+### Primitive launcher
+
 For this to work you need a functioning r-base and the packages required for this app (see *dependencies*) installed on your system. By creating a launcher, you can start the app without starting Rstudio or entering the terminal and run the respective commands. 
 
 To add a launcher, e.g. to a pane, create an empty launcher that leads to the file `zeppR.sh` in the apps root directory containing the following command: 
@@ -100,6 +102,12 @@ sudo chmod +x zeppR.sh
 ```
 
 If desired, you can use the icon from the root directory via the image selection option of your launcher menu to customize the button. 
+
+This process needs to be terminated manually, e.g. using `pkill`.
+
+### Tab-exit-terminated process 
+
+For a more convenient process management, use the script provided in the code's root directory. 
 
 ## Status
 

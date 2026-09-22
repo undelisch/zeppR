@@ -450,6 +450,8 @@ check out <a href="HOWTO.Rmd"><code>HOWTO.Rmd</code></a>.</p>
 </div>
 <div id="add-a-launcher-linux-only" class="section level2">
 <h2>Add a launcher (Linux only)</h2>
+<div id="primitive-launcher" class="section level3">
+<h3>Primitive launcher</h3>
 <p>For this to work you need a functioning r-base and the packages
 required for this app (see <em>dependencies</em>) installed on your
 system. By creating a launcher, you can start the app without starting
@@ -466,6 +468,14 @@ dir and the command to <code>./zeppR.sh</code>.</p>
 <p>If desired, you can use the icon from the root directory via the
 image selection option of your launcher menu to customize the
 button.</p>
+<p>This process needs to be terminated manually, e.g. using
+<code>pkill</code>.</p>
+</div>
+<div id="tab-exit-terminated-process" class="section level3">
+<h3>Tab-exit-terminated process</h3>
+<p>For a more convenient process management, use the script provided in
+the code’s root directory.</p>
+</div>
 </div>
 <div id="status" class="section level2">
 <h2>Status</h2>
